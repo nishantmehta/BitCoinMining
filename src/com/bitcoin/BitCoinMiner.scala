@@ -12,7 +12,9 @@ import java.util.HashSet
 import java.util.Collections
 import scala.collection.SortedMap
 import com.bitcoin.BitCoinMining._
-
+/*
+ * this file has the slave
+ */
 class BitCoinMiner extends Actor {
   val random = new scala.util.Random
   def receive = {

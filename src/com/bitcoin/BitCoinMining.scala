@@ -12,6 +12,9 @@ import java.util.HashSet
 import java.util.Collections
 import scala.collection.SortedMap
 
+/*
+ * This file has the master
+ */
 object BitCoinMining extends App {
 
   sealed trait BitCoinMessage
