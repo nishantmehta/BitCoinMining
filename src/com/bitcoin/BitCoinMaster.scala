@@ -15,6 +15,7 @@ import scala.collection.SortedMap
 import com.bitcoin.BitCoinMining._
 
 class BitCoinMaster(numberOfWorkers: Int, prefix: String, timeInMinutes: Int) extends Actor {
+  
   val workerRouter = context.actorOf(Props[BitCoinMiner].withRouter(RoundRobinRouter(numberOfWorkers)), name = "workerRouter")
   var bitCoins: SortedMap[String, String] = SortedMap[String, String]()(implicitly[Ordering[String]].reverse)
   var finishedCounter = 0
